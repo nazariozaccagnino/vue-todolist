@@ -39,6 +39,9 @@ createApp({
             this.todo.push(newItem);
             this.itemText ='';
         },
+        flushArray(){
+            this.todo.length = 0;
+        }
     },
     mounted(){
         // console.log(this.todo);

@@ -18,11 +18,12 @@
 
 <body>
     <div id="app">
-        <header class="bg-info-subtle d-flex align-items-center">
-            <img src="./img/png-checkmark.png" alt="check">
-            <span>
+        <header class="bg-info-subtle d-flex align-items-center justify-content-between">
+            <div class="d-flex align-items-center">
+                <img src="./img/png-checkmark.png" alt="check">
                 <h1>To-do List</h1>
-            </span>
+            </div>
+            <button type="button" class="btn btn-danger" @click="flushArray">Svuota Lista</button>
         </header>
         <main class="container">
             <h2 class="text-center">Lista</h2>
@@ -38,7 +39,8 @@
             <div class="mb-3">
                 <h2 class="text-center">Aggiungi elemento</h2>
                 <div class="d-flex">
-                    <input type="text" class="form-control me-2" id="exampleFormControlInput1" placeholder="Inserisci item" v-model="itemText">
+                    <input type="text" class="form-control me-2" id="exampleFormControlInput1"
+                        placeholder="Inserisci item" v-model="itemText">
                     <button type="button" class="btn btn-success" @click="addItem">Aggiungi</button>
                 </div>
             </div>
