@@ -22,12 +22,10 @@
         </header>
         <main class="container">
             <h2 class="text-center">Lista</h2>
-            <ul class="list-group">
-                <li class="list-group-item d-flex justify-content-between"  v-for="(item,index) in todo" :key="item.id">
-                    <div>
-                        <input class="form-check-input me-1" type="checkbox" value="" id="firstCheckboxStretched">
-                        <label class="form-check-label stretched-link" for="firstCheckboxStretched"></label>
-                        <span>{{item.text}}</span>
+            <ul class="list-group" v-for="(item,index) in todo" :key="item.id">
+                <li class="list-group-item d-flex justify-content-between" :class="{'bg-success-subtle':item.done}">
+                    <div @click="toggleDone(item.id)">
+                        <span class="mx-2 pointer" :class="{'text-decoration-line-through':item.done}">{{item.text}}</span>
                     </div>
                     <span><i class="fa-solid fa-eraser"></i></span>
                 </li>
