@@ -40,7 +40,7 @@
                 <h2 class="text-center">Aggiungi elemento</h2>
                 <div class="d-flex">
                     <input type="text" class="form-control me-2" id="exampleFormControlInput1"
-                        placeholder="Inserisci item" v-model="itemText">
+                        placeholder="Inserisci item" v-model="itemText" @keyup.enter="addItem">
                     <button type="button" class="btn btn-success" @click="addItem">Aggiungi</button>
                 </div>
             </div>
