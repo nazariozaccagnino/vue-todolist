@@ -1,1 +1,7 @@
-export const todo = []
+export const todo = [
+    {
+        id: 1,
+        text: 'costume',
+        done: false
+    }
+]
