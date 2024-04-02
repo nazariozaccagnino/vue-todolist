@@ -38,8 +38,8 @@
             <div class="mb-3">
                 <h2 class="text-center">Aggiungi elemento</h2>
                 <div class="d-flex">
-                    <input type="text" class="form-control me-2" id="exampleFormControlInput1" placeholder="Inserisci item">
-                    <button type="button" class="btn btn-success">Success</button>
+                    <input type="text" class="form-control me-2" id="exampleFormControlInput1" placeholder="Inserisci item" v-model="itemText">
+                    <button type="button" class="btn btn-success" @click="addItem">Aggiungi</button>
                 </div>
             </div>
 
