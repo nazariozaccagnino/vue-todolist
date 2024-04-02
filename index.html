@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,24 +15,37 @@
 
     <title>To-do list</title>
 </head>
+
 <body>
     <div id="app">
         <header class="bg-info-subtle d-flex align-items-center">
             <img src="./img/png-checkmark.png" alt="check">
-            <span><h1>To-do List</h1></span>
+            <span>
+                <h1>To-do List</h1>
+            </span>
         </header>
         <main class="container">
             <h2 class="text-center">Lista</h2>
             <ul class="list-group" v-for="(item,index) in todo" :key="item.id">
                 <li class="list-group-item d-flex justify-content-between" :class="{'bg-success-subtle':item.done}">
                     <div @click="toggleDone(item.id)">
-                        <span class="mx-2 pointer" :class="{'text-decoration-line-through':item.done}">{{item.text}}</span>
+                        <span class="mx-2 pointer"
+                            :class="{'text-decoration-line-through':item.done}">{{item.text}}</span>
                     </div>
                     <span @click="removeItem(item.id)"><i class="fa-solid fa-eraser"></i></span>
                 </li>
+            </ul>
+            <div class="mb-3">
+                <h2 class="text-center">Aggiungi elemento</h2>
+                <div class="d-flex">
+                    <input type="text" class="form-control me-2" id="exampleFormControlInput1" placeholder="Inserisci item">
+                    <button type="button" class="btn btn-success">Success</button>
+                </div>
+            </div>
 
         </main>
     </div>
 
 </body>
+
 </html>

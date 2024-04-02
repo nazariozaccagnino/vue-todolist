@@ -8,5 +8,10 @@ export const todo = [
         id: 2,
         text: 'paletta',
         done: false
+    },
+    {
+        id: 3,
+        text: 'secchiello',
+        done: false
     }
 ]
