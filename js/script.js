@@ -16,7 +16,12 @@ createApp({
             })
             // console.log(item);
             item.done = !item.done
-        }
+        },
+        removeItem(id){
+            let index = this.todo.findIndex((el)=> el.id === id)
+            // console.log(index);            
+            this.todo.splice(index, 1)            
+        },
 
     },
     mounted(){

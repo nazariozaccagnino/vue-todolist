@@ -27,7 +27,7 @@
                     <div @click="toggleDone(item.id)">
                         <span class="mx-2 pointer" :class="{'text-decoration-line-through':item.done}">{{item.text}}</span>
                     </div>
-                    <span><i class="fa-solid fa-eraser"></i></span>
+                    <span @click="removeItem(item.id)"><i class="fa-solid fa-eraser"></i></span>
                 </li>
 
         </main>
